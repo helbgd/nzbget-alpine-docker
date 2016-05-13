@@ -17,7 +17,7 @@ mkdir /nzbget && mkdir /config && mkdir /downloads
 # download the testing nzbget version
 wget -O - http://nzbget.net/info/nzbget-version-linux.json | \
 sed -n "s/^.*testing-download.*: \"\(.*\)\".*/\1/p" | \
-wget --no-check-certificate -i - -O /setup/nzbget-testing-bin-linux.run || \
+wget --no-check-certificate -i -O /setup/nzbget-testing-bin-linux.run || \
 echo "*** Download failed ***"
 
 # let's install nzbget (defaults to the "/nzbget" directory)
