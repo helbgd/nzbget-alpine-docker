@@ -14,3 +14,6 @@ sed -i -e "s#\(WarningTarget=\).*#\1screen#g" /config/nzbget.conf
 sed -i -e "s#\(InfoTarget=\).*#\1screen#g" /config/nzbget.conf
 sed -i -e "s#\(DetailTarget=\).*#\1none#g" /config/nzbget.conf
 sed -i -e "s#\(DebugTarget=\).*#\1none#g" /config/nzbget.conf
+sed -i -e "s#\(ScanScript=\).*#\1NZBPass.py#g" /config/nzbget.conf
+sed -i -e "s#\(ScriptDir=\).*#\1${MainDir}/scripts#g" /config/nzbget.conf
+
