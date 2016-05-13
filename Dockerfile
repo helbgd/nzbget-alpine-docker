@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Peter Winter <peter@pwntr.com>
+MAINTAINER Helmuth Angerer helmut.angerer@googlemail.com
 LABEL Description="Simple and lightweight nzbget docker container, based on Alpine Linux." Version="0.1"
 
 # copy init files
