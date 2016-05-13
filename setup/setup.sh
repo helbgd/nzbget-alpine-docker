@@ -26,11 +26,14 @@ sh /setup/nzbget-testing-bin-linux.run --destdir /nzbget
 # check for and modify the config for our container
 sh /setup/modify_config_for_container_env.sh
 
+# download https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py
+wget https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py --no-check-certificate -i - -O /nzbget/scripts/NZBPass.py
+chmod a+x /nzbget/scripts/NZBPass.py
+
 # change the owner accordingly
 chown -R nzbget:nzbget /nzbget /config /downloads /setup/nzbget-testing-bin-linux.run
 
-# download https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py
-wget https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py --no-check-certificate -i - -O /nzbget/scripts/NZBPass.py
+
 
 # we don't need GNU wget anymore (busybox' wget will still be available).
 apk del wget
