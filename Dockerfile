@@ -1,6 +1,6 @@
 FROM alpine:latest
 MAINTAINER Helmuth Angerer<helmut.angerer@googlemail.com>
-LABEL Description="Simple and lightweight nzbget docker container, based on Alpine Linux." Version="0.2"
+LABEL Description="Simple and lightweight nzbget docker container, based on Alpine Linux." Version="0.3"
 
 # copy init files
 RUN mkdir /setup
