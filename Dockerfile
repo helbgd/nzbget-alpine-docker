@@ -22,4 +22,4 @@ EXPOSE 6789
 USER nzbget
 
 # set some defaults and start nzbget in server and log mode
-ENTRYPOINT ["/nzbget/nzbget", "-s", "-o", "OutputMode=log", "-c", "/config/nzbget.conf"]
+ENTRYPOINT ["/nzbget/nzbget", "-s", "-o", "outputmode=log", "-c", "/config/nzbget.conf"]
