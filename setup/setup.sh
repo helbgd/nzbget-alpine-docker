@@ -7,8 +7,6 @@ apk update && apk upgrade
 # install python for 
 apk add wget
 apk add python
-apk add busybox
-apk add bash
 
 # add a non-root user and group called "nzbget" with no password, no home dir, no shell, and gid/uid set to 1000
 addgroup -g 1000 nzbget && adduser -H -D -G nzbget -s /bin/false -u 1000 nzbget
