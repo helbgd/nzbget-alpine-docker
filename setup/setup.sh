@@ -27,8 +27,9 @@ sh /setup/nzbget-testing-bin-linux.run --destdir /nzbget
 sh /setup/modify_config_for_container_env.sh
 
 # download https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py
-wget https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py --no-check-certificate -i - -O /nzbget/scripts/NZBPass.py
-chmod a+x /nzbget/scripts/NZBPass.py
+# wget https://raw.githubusercontent.com/cytec/nzbget-scripts/master/Scan/NZBPass.py --no-check-certificate -i - -O /nzbget/scripts/NZBPass.py
+ln -s /config/NZBPass.py /nzbget/scripts/NZBPass.py
+# chmod a+x /nzbget/scripts/NZBPass.py
 
 # change the owner accordingly
 chown -R nzbget:nzbget /nzbget /config /downloads /setup/nzbget-testing-bin-linux.run
